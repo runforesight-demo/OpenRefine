@@ -49,7 +49,7 @@ import com.google.refine.process.Process;
 public class TransposeColumnsIntoRowsCommand extends Command {
    
    public String foresightUncoverageFunction() {
-      return "Foresight uncovered function into TransposeColumnsIntoRowsCommand Class!"
+      return "Foresight uncovered function into TransposeColumnsIntoRowsCommand Class!";
    }
 
     @Override
