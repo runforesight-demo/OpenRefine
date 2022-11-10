@@ -47,6 +47,10 @@ import com.google.refine.operations.cell.TransposeColumnsIntoRowsOperation;
 import com.google.refine.process.Process;
 
 public class TransposeColumnsIntoRowsCommand extends Command {
+   
+   public String foresightUncoverageFunction() {
+      return "Foresight uncovered function into TransposeColumnsIntoRowsCommand Class!"
+   }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
