@@ -135,11 +135,6 @@ jobs:
         distribution: 'adopt'
         java-version: 17
 
-    - name: Check Java linting
-      id: java_linting
-      run: |
-        mvn formatter:validate
-
     - name: Build and test with Maven
       run: mvn jacoco:prepare-agent test    
       
