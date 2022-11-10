@@ -43,6 +43,10 @@ import com.google.common.collect.Lists;
 import com.google.refine.expr.util.JsonValueConverter;
 
 public class JSONUtilities {
+   
+    static public String foresightUnvocered() {
+        return "Foresight uncovered function!"
+    }
 
     static public ObjectNode getObject(ObjectNode obj, String key) {
         JsonNode node = obj.get(key);
