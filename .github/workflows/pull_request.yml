@@ -2,7 +2,7 @@ name: Continuous Integration
 
 on:
   schedule:
-    - cron: '0 */1 * * *'
+    - cron: '0 */4 * * *'
   workflow_dispatch:
   pull_request:
     paths-ignore:
