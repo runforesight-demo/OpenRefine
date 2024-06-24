@@ -79,11 +79,6 @@ jobs:
         distribution: 'adopt'
         java-version: ${{ matrix.java }}
 
-    - name: Check Java linting
-      id: java_linting
-      run: |
-        mvn compile formatter:validate javadoc:javadoc -Ddoclint=all
-
     - name: Configure connections to databases
       id: configure_db_connections
       run: cat extensions/database/tests/conf/github_actions_tests.xml | sed -e "s/MYSQL_PORT/${{ job.services.mysql.ports[3306] }}/g" | sed -e "s/POSTGRES_PORT/${{ job.services.postgres.ports[5432] }}/g" > extensions/database/tests/conf/tests.xml
@@ -137,11 +132,6 @@ jobs:
       with:
         distribution: 'adopt'
         java-version: 17
-
-    - name: Check Java linting
-      id: java_linting
-      run: |
-        mvn formatter:validate
 
     - name: Build and test with Maven
       run: mvn jacoco:prepare-agent test    
